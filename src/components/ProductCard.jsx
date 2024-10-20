@@ -2,7 +2,7 @@ import { CiHeart } from "react-icons/ci";
 import MassImage from "./../assets/productImage/mass.png";
 import AddIcon from "./../assets/productImage/addIcon.png";
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
   return (
     <div className="ProductCard relative">
       <div className="red-off">75%</div>
@@ -10,15 +10,12 @@ const ProductCard = () => {
         <CiHeart color="red" fill="red" size={34} />
       </div>
       <div className="product-image">
-        <img src={MassImage} alt="" />
+        <img src={product.image} alt="" />
       </div>
       <div className="card-info">
-        <p className="description">
-          Bolt 100% whey Protien powder | With superfood |PHYCOCYANIN | USA
-          Formulationasdfgh dbcguzxcgbn z xZdfgh fg fgh dfrtyui rtyu frtyu fgtyu fgh fgh fgh iuyt rty 9rtyuiuyty uyt rty
-        </p>
+        <p className="description">{product.description}</p>
         <div className="price">
-          <h3>₹1,999</h3>
+          <h3>{product.price}</h3>
           <p>
             <span>₹2,999</span>(33%off)
           </p>

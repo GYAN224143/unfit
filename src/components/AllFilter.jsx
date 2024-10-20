@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 
-const AllFilter = ({ setFilter }) => {
+const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
   const [openCategory, setOpenCategory] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
   const [openRating, setOpenRating] = useState(false);
@@ -11,6 +11,23 @@ const AllFilter = ({ setFilter }) => {
   const toggleCategory = () => setOpenCategory(!openCategory);
   const togglePrice = () => setOpenPrice(!openPrice);
   const toggleRating = () => setOpenRating(!openRating);
+
+  // Handle category selection
+  const handleCategoryChange = (category) => {
+    setCategory(category);
+  };
+
+  // Handle price range selection
+  const handlePriceChange = (e, min, max) => {
+    const isChecked = e.target.checked;
+    if (isChecked) {
+      setPriceRange((prevRanges) => [...prevRanges, { min, max }]);
+    } else {
+      setPriceRange((prevRanges) =>
+        prevRanges.filter((range) => range.min !== min && range.max !== max)
+      );
+    }
+  };
   return (
     <div className=" w-full filter-section-over">
       <div className="cros-button" onClick={() => setFilter(true)}>
@@ -24,10 +41,30 @@ const AllFilter = ({ setFilter }) => {
         </button>
         {openCategory && (
           <div className="categary">
-            <div className="categary-item">Multivitamin</div>
-            <div className="categary-item">Women Supplements</div>
-            <div className="categary-item">Omega 3 & Fish Oil</div>
-            <div className="categary-item">Calcium Supplements</div>
+            <div
+              className="categary-item"
+              onClick={() => handleCategoryChange("electronics")}
+            >
+              Electronics
+            </div>
+            <div
+              className="categary-item"
+              onClick={() => handleCategoryChange("jewelery")}
+            >
+              Jewelry
+            </div>
+            <div
+              className="categary-item"
+              onClick={() => handleCategoryChange("men's clothing")}
+            >
+              Men's Clothing
+            </div>
+            <div
+              className="categary-item"
+              onClick={() => handleCategoryChange("women's clothing")}
+            >
+              Women's Clothing
+            </div>
             <a href="#" className="see-all">
               See all
             </a>
@@ -44,24 +81,44 @@ const AllFilter = ({ setFilter }) => {
         {openPrice && (
           <div className="filter-price">
             <div className="filter-price-section">
-              <input type="checkbox" id="price1" />
-              <label htmlFor="price1">₹0 - ₹1000</label>
+              <input
+                type="checkbox"
+                id="price1"
+                onChange={(e) => handlePriceChange(e, 0, 10)}
+              />
+              <label htmlFor="price1">₹0 - ₹10</label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="price2" />
-              <label htmlFor="price2">₹1000 - ₹2000</label>
+              <input
+                type="checkbox"
+                id="price2"
+                onChange={(e) => handlePriceChange(e, 10, 20)}
+              />
+              <label htmlFor="price2">₹10 - ₹20</label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="price3" />
-              <label htmlFor="price3">₹2000 - ₹3000</label>
+              <input
+                type="checkbox"
+                id="price3"
+                onChange={(e) => handlePriceChange(e, 20, 30)}
+              />
+              <label htmlFor="price3">₹20 - ₹30</label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="price4" />
-              <label htmlFor="price4">₹3000 - ₹4000</label>
+              <input
+                type="checkbox"
+                id="price4"
+                onChange={(e) => handlePriceChange(e, 30, 40)}
+              />
+              <label htmlFor="price4">₹30 - ₹40</label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="price5" />
-              <label htmlFor="price5">₹4000 - ₹5000</label>
+              <input
+                type="checkbox"
+                id="price5"
+                onChange={(e) => handlePriceChange(e, 40, 50)}
+              />
+              <label htmlFor="price5">₹40 - ₹50</label>
             </div>
             <a href="#" className="see-all">
               See all
