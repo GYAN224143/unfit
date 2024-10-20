@@ -726,10 +726,30 @@ body {
   .product-wraper {
     padding: 40px 60px;
   }
+  .header {
+    padding: 0px 60px;
+  }
+  .action-bar {
+    padding: 40px 60px;
+  }
+  .information {
+    padding: 0px 60px;
+    padding-bottom: 40px;
+  }
 }
 @media screen and (max-width: 1620px) {
   .product-wraper {
     padding: 30px 30px;
+  }
+  .header {
+    padding: 0px 30px;
+  }
+  .action-bar {
+    padding: 40px 30px;
+  }
+  .information {
+    padding: 0px 30px;
+    padding-bottom: 40px;
   }
 }
 @media screen and (max-width: 1520px) {
@@ -739,8 +759,102 @@ body {
   .product-card-container {
     grid-template-columns: auto auto auto;
   }
+  .header-menus-bar {
+    /* width: 100%; */
+    justify-content: start;
+    gap: 0;
+    overflow: auto;
+  }
+  .header-menus-bar a {
+    margin: 0 24px;
+    text-wrap: nowrap;
+  }
+  .coupan-card h2 {
+    font-size: 24px;
+  }
+  .coupan-card img {
+    width: 64px;
+  }
 }
 @media screen and (max-width: 1220px) {
+  .information-section .coin-shop {
+    padding: 20px 16px;
+  }
+  .offers-section {
+    padding: 20px 16px;
+    gap: 10px;
+    border-top: 3px solid #f0f0f0;
+  }
+  .Slider-header {
+    padding: 10px 16px 15px 16px;
+  }
+  .slider-container .slider-card {
+    padding-left: 16px;
+    padding-right: 0px;
+  }
+  .coupan-card h2 {
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+  }
+  .coupan-card {
+    height: 100px;
+    gap: 5px;
+  }
+  .information-section .coin-shop .right-part {
+    max-width: 480px;
+    width: 100%;
+    height: 100px;
+    padding: 7px 16px;
+    gap: 10px;
+  }
+  .information-section .coin-shop .right-part .info li {
+    gap: 10px;
+  }
+  .information-section .coin-shop .right-part .info {
+    gap: 5px;
+  }
+  .information-section .coin-shop .right-part .info li p {
+    font-size: 16px;
+
+    line-height: 18.44px;
+  }
+  .information-section .coin-shop .right-part .info li p span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22.44px;
+  }
+  .information-section .coin-shop .right-part .info li .wallet {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+  }
+
+  .information-section .coin-shop .right-part .coin-img {
+    width: 70px;
+  }
+
+  .information-section .coin-shop .left-part h2 {
+    font-size: 36px;
+  }
+  .header .header-search {
+    max-width: 537px;
+    width: 100%;
+  }
+  .header {
+    padding: 0px 20px;
+  }
+  .action-bar {
+    padding: 40px 20px;
+  }
+  .information {
+    padding: 0px 20px;
+    padding-bottom: 40px;
+  }
   .product-wraper {
     padding: 20px 20px;
   }
@@ -773,6 +887,53 @@ body {
   }
 }
 @media screen and (max-width: 1024px) {
+  .header {
+    height: 80px;
+  }
+  .header .header-left-part li a img {
+    width: auto;
+    height: 49.01px;
+  }
+  .header .header-search {
+    height: 36px;
+  }
+  .header .header-search input {
+    font-size: 14px;
+  }
+  .header .header-search img {
+    width: 20px;
+    height: 20px;
+  }
+  .header .header-search {
+    gap: 5px;
+  }
+  .header-menus-bar {
+    height: 42px;
+    margin-top: 10px;
+  }
+  .action-bar {
+    padding: 10px 30px;
+  }
+  .action-bar ul li {
+    font-size: 12px;
+  }
+  .action-bar ul img {
+    width: 6px;
+  }
+  .information-section .coin-shop .right-part {
+    max-width: 360px;
+    width: 100%;
+    height: 100px;
+    padding: 7px 12px;
+    gap: 10px;
+  }
+  .information-section .coin-shop .left-part h2 {
+    font-size: 24px;
+  }
+  .coin-shop .left-part img {
+    width: 46px;
+    height: auto;
+  }
   .ProductCard {
     max-width: 400px;
     min-width: 240px;
@@ -821,6 +982,81 @@ body {
     height: 78px;
     border-radius: 12px;
     font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 120px;
+  }
+  .header .header-left-part li a img {
+    width: auto;
+    height: 36.01px;
+  }
+  .header .header-left-part li a {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #000000;
+  }
+  .header-bar p {
+    font-size: 12px;
+  }
+  .header-bar span {
+    border: 1px solid #ffffff;
+    height: 12px;
+  }
+  .header-bar {
+    gap: 5px;
+  }
+  .coupan-card img {
+    width: 36px;
+  }
+  .offers-section {
+    padding: 10px 10px;
+    gap: 7px;
+    border-top: 3px solid #f0f0f0;
+  }
+  .coupan-card {
+    height: 78px;
+    gap: 5px;
+  }
+  .coupan-card h2 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .information-section .coin-shop .right-part {
+    max-width: 280px;
+    width: 100%;
+    height: 78px;
+    padding: 7px 7px;
+    gap: 7px;
+  }
+  .information-section .coin-shop .right-part .info li {
+    gap: 5px;
+  }
+  .information-section .coin-shop .right-part .info li .wallet {
+    width: 16px;
+    height: 16px;
+  }
+  .information-section .coin-shop .right-part .info li p {
+    font-size: 12px;
+    line-height: 13.44px;
+  }
+  .information-section .coin-shop .right-part .info li p span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14.44px;
+  }
+  .information-section .coin-shop .right-part .coin-img {
+    width: 40px;
+  }
+  .information-section .coin-shop .left-part img {
+    width: 40px;
+    height: auto;
+  }
+  .information-section .coin-shop .left-part h2 {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 @media screen and (max-width: 520px) {

@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <>
       <div className="header">
-        <div className="w-full h-full flex justify-between items-center">
-          <ul className="flex justify-start items-center gap-[38px]  header-left-part">
+        <div className="w-full h-full  flex flex-col gap-3 justify-center md:flex-row md:justify-between items-center">
+          <ul className=" w-full md:w-auto flex justify-between md:justify-start items-center gap-5 lg:gap-[38px]  header-left-part">
             <li>
               <Link to="/">
                 <img src={LogoImg} alt="" />
@@ -22,7 +22,7 @@ export default function Header() {
               <Link to="/product">Benefits</Link>
             </li>
           </ul>
-          <div className="flex justify-end items-center gap-[25px] ">
+          <div className="w-full md:w-auto flex justify-end items-center gap-5 lg:gap-[25px] ">
             <div className="flex justify-end items-center header-search">
               <img src={Search} alt="" />
               <input type="text" placeholder="Search on unFIT..." />
