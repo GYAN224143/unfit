@@ -2,8 +2,10 @@ import { useState, useEffect } from "react";
 import AllFilter from "../components/AllFilter";
 import ProductCard from "../components/ProductCard";
 import ProductTopBar from "../components/ProductTopBar";
+import { useNavigate } from "react-router-dom";
 
 const Product = () => {
+  const navigate = useNavigate();
   const [filter, setFilter] = useState(false);
 
   // Handle window resize to update filter state automatically
@@ -34,7 +36,9 @@ const Product = () => {
 
   return (
     <div className="product-wraper">
-      <h1 className="product-umart">Umart Store</h1>
+      <h1 className="product-umart" onClick={() => navigate("/")}>
+        Umart Store
+      </h1>
       <div className="w-full mt-5 lg:mt-[40px] flex gap-[30px]">
         {filter ? (
           <div className="filter-icons" onClick={handleFilter}>

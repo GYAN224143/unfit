@@ -16,10 +16,10 @@ export default function Header() {
               </Link>
             </li>
             <li className="">
-              <Link to="/">Brands</Link>
+              <Link to="/product">Brands</Link>
             </li>
             <li>
-              <Link to="/">Benefits</Link>
+              <Link to="/product">Benefits</Link>
             </li>
           </ul>
           <div className="flex justify-end items-center gap-[25px] ">
