@@ -17,7 +17,9 @@ const ProductCard = ({ product }) => {
         <div className="price">
           <h3>{product.price}</h3>
           <p>
-            <span>₹2,999</span>(33%off)
+            <span>₹2,999</span>(33%off),
+            <span>Ratting :</span>
+            {product.rating.rate}
           </p>
         </div>
         <button>
