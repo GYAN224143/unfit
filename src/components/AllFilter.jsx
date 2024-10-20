@@ -132,6 +132,14 @@ const AllFilter = ({
               />
               <label htmlFor="price5">₹40 - ₹50</label>
             </div>
+            <div className="filter-price-section">
+              <input
+                type="checkbox"
+                id="price6"
+                onChange={(e) => handlePriceChange(e, 50, 5000)}
+              />
+              <label htmlFor="price5">₹50 - ₹5000</label>
+            </div>
             <a href="#" className="see-all">
               See all
             </a>
