@@ -237,9 +237,8 @@ body {
 .offers-section {
   width: 100%;
   padding: 30px 32px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   gap: 25px;
   border-top: 6px solid #f0f0f0;
 }
@@ -868,7 +867,7 @@ body {
     background: white;
     z-index: 9999;
     height: 100%;
-    border: 2px solid rgba(148, 146, 146, 0.521);
+    border-right: 2px solid rgba(148, 146, 146, 0.521);
     /* display: none; */
   }
   .filter-icons {
@@ -985,6 +984,9 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  .ProductCard .card-info button p {
+    font-size: 16px;
+  }
   .header {
     height: 120px;
   }
@@ -1058,6 +1060,43 @@ body {
     font-size: 16px;
     line-height: 24px;
   }
+  .information-section .coin-shop .left-part {
+    gap: 10px;
+  }
+  .information-section .coin-shop {
+    padding: 10px 10px;
+  }
+  .Slider-header {
+    padding: 10px 10px 10px 10px;
+  }
+  .Slider-header p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.18px;
+  }
+  .Slider-header img {
+    width: 20px;
+    height: 20px;
+  }
+  .slider-container .slider-card p {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 7px 0;
+  }
+  .header {
+    padding: 0px 16px;
+  }
+  .information {
+    padding: 0px 10px;
+    padding-bottom: 30px;
+  }
+  .action-bar {
+    padding: 10px 20px;
+  }
+  .offers-section {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 @media screen and (max-width: 520px) {
   .filter-list-container {
@@ -1069,6 +1108,31 @@ body {
   }
   .product-card-container {
     grid-template-columns: auto;
+  }
+  .information-section .coin-shop {
+    width: 100%;
+    gap: 10px;
+
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider-container .slider-card {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .slider-container .slider-card p {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 6px 7px;
+  }
+  .Slider-header p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Slider-header img {
+    width: 20px;
+    height: 16px;
   }
 }
 @media screen and (max-width: 425px) {

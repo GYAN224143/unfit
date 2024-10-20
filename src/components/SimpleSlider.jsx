@@ -19,7 +19,34 @@ const SimpleSlider = () => {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+          infinite: true,
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 3000,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          dots: false,
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          speed: 1000,
+          autoplaySpeed: 3000,
+        },
+      },
+    ],
   };
+
   return (
     <>
       <div className="Slider-header">
