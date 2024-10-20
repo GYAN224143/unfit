@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import { RxCross2 } from "react-icons/rx";
 
-const AllFilter = () => {
+const AllFilter = ({ setFilter }) => {
   const [openCategory, setOpenCategory] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
   const [openRating, setOpenRating] = useState(false);
@@ -11,7 +12,10 @@ const AllFilter = () => {
   const togglePrice = () => setOpenPrice(!openPrice);
   const toggleRating = () => setOpenRating(!openRating);
   return (
-    <div className=" w-full">
+    <div className=" w-full filter-section-over">
+      <div className="cros-button" onClick={() => setFilter(true)}>
+        <RxCross2 size={36} color="#ec4e1e" />
+      </div>
       {/* Category Accordion */}
       <div className="filter-container">
         <button onClick={toggleCategory} className="filter-header">
