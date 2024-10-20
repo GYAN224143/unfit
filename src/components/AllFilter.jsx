@@ -3,7 +3,13 @@ import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 
-const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
+const AllFilter = ({
+  setFilter,
+  setCategory,
+  setPriceRange,
+  setSelectedRating,
+  filterClose,
+}) => {
   const [openCategory, setOpenCategory] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
   const [openRating, setOpenRating] = useState(false);
@@ -28,6 +34,12 @@ const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
       );
     }
   };
+
+  // Handle rating filter change
+  const handleRatingChange = (rating) => {
+    setSelectedRating(rating); // Set the selected rating
+  };
+
   return (
     <div className=" w-full filter-section-over">
       <div className="cros-button" onClick={() => setFilter(true)}>
@@ -136,7 +148,12 @@ const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
         {openRating && (
           <div className="filter-price">
             <div className="filter-price-section">
-              <input type="checkbox" id="rating4" className="mr-1" />
+              <input
+                type="checkbox"
+                id="rating4"
+                className="mr-1"
+                onChange={() => handleRatingChange(4)}
+              />
               <label htmlFor="rating4 " className="flex gap-[6px] items-center">
                 <StarIcon />
                 <StarIcon />
@@ -145,7 +162,12 @@ const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
               </label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="rating3" className="mr-1" />
+              <input
+                type="checkbox"
+                id="rating3"
+                className="mr-1"
+                onChange={() => handleRatingChange(3)}
+              />
               <label htmlFor="rating3" className="flex gap-[6px] items-center">
                 <StarIcon />
                 <StarIcon />
@@ -153,14 +175,24 @@ const AllFilter = ({ setFilter, setCategory, setPriceRange }) => {
               </label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="rating2" className="mr-1" />
+              <input
+                type="checkbox"
+                id="rating2"
+                className="mr-1"
+                onChange={() => handleRatingChange(2)}
+              />
               <label htmlFor="rating2" className="flex gap-[6px] items-center">
                 <StarIcon />
                 <StarIcon /> & Up
               </label>
             </div>
             <div className="filter-price-section">
-              <input type="checkbox" id="rating1" className="mr-1" />
+              <input
+                type="checkbox"
+                id="rating1"
+                className="mr-1"
+                onChange={() => handleRatingChange(1)}
+              />
               <label htmlFor="rating1" className="flex gap-[6px] items-center">
                 <StarIcon /> & Up
               </label>

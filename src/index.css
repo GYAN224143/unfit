@@ -367,6 +367,7 @@ body {
   line-height: 28.44px;
   text-align: left;
   color: #1c1c1c;
+  text-transform: capitalize;
 }
 .top-bar-section .selector {
   width: 250.76px;
