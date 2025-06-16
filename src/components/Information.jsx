@@ -1,7 +1,9 @@
 import CoinImg from "./../assets/profileImages/coinImg.png";
 import Coin from "./../assets/profileImages/Coin.png";
 import Wallet from "./../assets/profileImages/Wallet.png";
-import Ballence from "./../assets/profileImages/ballence.svg";
+// import Ballence from "./../assets/profileImages/ballence.svg";
+import Ballence from "../assets/profileImages/Ballence.svg";
+
 import Layer from "./../assets/profileImages/Layer.svg";
 import CoupanCard from "./CoupanCard";
 import UCoin from "./../assets/profileImages/UCoin.png";

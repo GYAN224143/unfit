@@ -8,7 +8,7 @@ const AllFilter = ({
   setCategory,
   setPriceRange,
   setSelectedRating,
-  filterClose,
+  // filterClose,
 }) => {
   const [openCategory, setOpenCategory] = useState(false);
   const [openPrice, setOpenPrice] = useState(false);
